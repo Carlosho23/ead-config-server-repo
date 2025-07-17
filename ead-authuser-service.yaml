@@ -34,19 +34,25 @@ ead:
     exchange:
       userEvent: ead.userevent
 
+authuser:
+  refresdscope:
+    name: Carlos Henrique
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - refresh
+          - health
+
+
 logging:
   level:
     com.ead: TRACE
     root: INFO
     org.springframework.web: DEBUG
     org.hibernate: INFO
-
-eureka:
-  client:
-    service-url:
-      defaultZone: 'http://localhost:8761/eureka'
-  instance:
-    hostname: localhost
 
 resilience4j:
   circuitbreaker:
