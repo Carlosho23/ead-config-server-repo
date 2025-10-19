@@ -1,5 +1,5 @@
 ead:
-  serviceRegistry:
+  serviceregistry:
     username: serviceregistryprod
     password: '{cipher}0f7d59da9c77db896db01e1af5c28082f1fd7432eb0f3554a143d78bfd807d0020200f38188492bbe122b695736ff0bf'
   auth:
@@ -9,7 +9,7 @@ ead:
 eureka:
   client:
     service-url:
-      defaultZone: "https://${ead.serviceRegistry.username}:${ead.serviceRegistry.password}@curso-ead-serviceregistry-prod-3540e139da3a.herokuapp.com/eureka/"
+      defaultZone: "https://${ead.serviceregistry.username}:${ead.serviceregistry.password}@curso-ead-serviceregistry-prod-3540e139da3a.herokuapp.com/eureka/"
   instance:
     prefer-ip-address: true
   instance:
