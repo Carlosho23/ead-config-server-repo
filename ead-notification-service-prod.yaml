@@ -1,11 +1,11 @@
 server:
   port: ${PORT}
   servlet:
-    context-path: '/ead-course/'
+    context-path: '/ead-notification'
 
 spring:
   application:
-    name: ead-course-service
+    name: ead-notification-service
   datasource:
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
@@ -24,16 +24,12 @@ spring:
     addresses: ${CLOUDAMQP_URL}
 
 ead:
-  api:
-    url:
-      authuser: 'http://ead-authuser-service/ead-authuser'
   broker:
     exchange:
-      userEventExchange: ead.userevent
       notificationCommandExchange: ead.notificationcommand
     queue:
-      userEventQueue:
-        name: ead.userevent.ms.course
+      notificationCommandQueue:
+        name: ead.notificationcommand.ms.notification
     key:
       notificationCommandKey: ms.notification
 
