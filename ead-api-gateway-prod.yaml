@@ -8,8 +8,8 @@ spring:
     gateway:
       mvc:
         routes:
-          - id: authuser-service
-            uri: https://curso-ead-authuser-prod-bb7cb26b48d0.herokuapp.com
+          - id: authuser
+            uri: lb://ead-authuser
             predicates:
               - Path=/ead-authuser/**
           - id: course-service
