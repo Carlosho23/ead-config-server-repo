@@ -9,7 +9,7 @@ spring:
       mvc:
         routes:
           - id: authuser
-            uri: lb://EAD-AUTHUSER-SERVICE
+            uri: https://curso-ead-authuser-prod-bb7cb26b48d0.herokuapp.com
             predicates:
               - Path=/ead-authuser/**
           - id: course-service
