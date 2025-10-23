@@ -9,7 +9,7 @@ spring:
       mvc:
         routes:
           - id: authuser
-            uri: lb://ead-authuser
+            uri: lb://EAD-AUTHUSER-SERVICE
             predicates:
               - Path=/ead-authuser/**
           - id: course-service
