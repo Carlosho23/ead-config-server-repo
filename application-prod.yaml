@@ -13,3 +13,6 @@ eureka:
   instance:
     hostname: ${APP_DOMAIN_NAME}
     no-secure-port: 80
+    instanceId: ${APP_DOMAIN_NAME}:${PORT}
+    nonSecurePort: ${PORT}
+    preferIpAddress: false
